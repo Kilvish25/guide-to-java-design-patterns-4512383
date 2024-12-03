@@ -10,6 +10,11 @@ public class App {
         var canada = new Country("Canada");
         var argentina = new Country("Argentina");
 
+        CountryCollection countryCollection = new CountryCollection(india, poland, nigeria, canada, argentina);
+
+        for(Country country: countryCollection){
+            System.out.println(country.getName());
+        }
     }
 
 }
