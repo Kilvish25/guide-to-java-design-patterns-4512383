@@ -3,11 +3,15 @@ package com.example;
 public class App {
 
     public static void main(String[] args) {
+        
         var light = new Light();
+
+        CommandOperator commandOperator = new CommandOperator();
+        
         light.isOn();
-        light.turnOnLight();
+        commandOperator.execute(new TurnLightOnCommand(light));
         light.isOn();
-        light.turnOffLight();
+        commandOperator.execute(new TurnLightOffCommand(light));
         light.isOn();
     }
 
