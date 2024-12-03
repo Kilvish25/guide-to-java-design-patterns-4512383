@@ -2,6 +2,7 @@ package com.example;
 
 public class App {
 
+    public static final MediaPlayerProxy MediaPlayerProxy = new MediaPlayerProxy();
     public static void main(String[] args) {
         goToMovieLibrary();
         goToFavoriteMovies();
@@ -9,14 +10,12 @@ public class App {
 
     private static void goToMovieLibrary() {
         System.out.println("Loading movie library...");
-        var movieMediaPlayer = new MovieMediaPlayer();
-        movieMediaPlayer.playMedia();
+        MediaPlayerProxy.playMedia();
     }
 
     private static void goToFavoriteMovies() {
         System.out.println("Loading favorite movies...");
-        var movieMediaPlayer = new MovieMediaPlayer();
-        movieMediaPlayer.playMedia();
+        MediaPlayerProxy.playMedia();
     }
 
 }
